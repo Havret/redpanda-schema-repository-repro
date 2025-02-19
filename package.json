@@ -1,0 +1,36 @@
+{
+  "name": "redpanda-schema-repository-repro",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "generate:types": "npx buf generate --template buf.gen.yaml",
+    "compile:ts": "tsc",
+    "build": "npm run generate:types && npm run compile:ts",
+    "dev": "ts-node src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Havret/redpanda-schema-repository-repro.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Havret/redpanda-schema-repository-repro/issues"
+  },
+  "homepage": "https://github.com/Havret/redpanda-schema-repository-repro#readme",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.10.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3",
+    "@bufbuild/protoc-gen-es": "^2.2.3"
+  },
+  "dependencies": {
+    "@bufbuild/protobuf": "^2.2.3",
+    "@confluentinc/kafka-javascript": "^1.2.0",
+    "@confluentinc/schemaregistry": "^1.1.0",
+    "axios": "^1.7.9",
+    "@bufbuild/buf": "^1.49.0"
+  }
+}
